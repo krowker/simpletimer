@@ -16,9 +16,12 @@ function App() {
       className="App"
       class="uk-background-secondary uk-light uk-padding uk-panel"
     >
+    <div
+    class="uk-flex uk-flex-center"
+    >
       <form>
         <input
-          class="uk-input"
+          class="uk-input uk-form-width-small uk-text-center"
           type="number"
           min="0"
           max="23"
@@ -29,7 +32,7 @@ function App() {
           disabled={timerState ? true : false}
         />
         <input
-          class="uk-input"
+          class="uk-input uk-form-width-small uk-text-center uk-margin-left"
           type="number"
           min="0"
           max="60"
@@ -40,7 +43,7 @@ function App() {
           disabled={timerState ? true : false}
         />
         <input
-          class="uk-input"
+          class="uk-input uk-form-width-small uk-text-center uk-margin-left"
           type="number"
           min="0"
           max="60"
@@ -51,12 +54,18 @@ function App() {
           disabled={timerState ? true : false}
         />
       </form>
+      </div>
+      <p></p>
+      <div
+      class = "uk-flex uk-flex-center"
+      >
       <button
         class="uk-button uk-button-default"
         onClick={timerState ? stop : start}
       >
         {timerState ? "stop" : "start"}
       </button>
+      </div>
     </div>
   );
 }
