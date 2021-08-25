@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useTimer } from "./hooks/useTimer";
+import "uikit/dist/css/uikit.min.css";
 
 function App() {
   const [hour, min, sec, timerState, start, stop, setTimer] = useTimer();
@@ -11,9 +12,13 @@ function App() {
   };
 
   return (
-    <div className="App"> 
+    <div
+      className="App"
+      class="uk-background-secondary uk-light uk-padding uk-panel"
+    >
       <form>
         <input
+          class="uk-input"
           type="number"
           min="0"
           max="23"
@@ -21,9 +26,10 @@ function App() {
           value={hour}
           name="hour"
           onInput={inputHandler}
-          disabled = {timerState ? true : false}
+          disabled={timerState ? true : false}
         />
         <input
+          class="uk-input"
           type="number"
           min="0"
           max="60"
@@ -31,9 +37,10 @@ function App() {
           value={min}
           name="min"
           onInput={inputHandler}
-          disabled = {timerState ? true : false}
+          disabled={timerState ? true : false}
         />
         <input
+          class="uk-input"
           type="number"
           min="0"
           max="60"
@@ -41,12 +48,15 @@ function App() {
           value={sec}
           name="sec"
           onInput={inputHandler}
-          disabled = {timerState ? true : false}
+          disabled={timerState ? true : false}
         />
       </form>
-      <button onClick={timerState ? stop : start}>
+      <button
+        class="uk-button uk-button-default"
+        onClick={timerState ? stop : start}
+      >
         {timerState ? "stop" : "start"}
-        </button>
+      </button>
     </div>
   );
 }
