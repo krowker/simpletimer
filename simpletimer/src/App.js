@@ -7,11 +7,6 @@ function App() {
 
   const inputHandler = (event) => {
     const { name, value } = event.target;
-    // setTime((currentTime) => ({
-    //   minutes: currentTime.minutes,
-    //   seconds: currentTime.seconds,
-    //   [name]: value,
-    // }));
     setTimer({ hour, min, sec, [name]: +value });
   };
 
