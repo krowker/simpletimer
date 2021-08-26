@@ -15,9 +15,13 @@ function App() {
     <div
       className="App"
       class="uk-background-secondary 
-      uk-light uk-padding 
+      uk-light 
+      uk-padding 
       uk-panel
-      uk-height-viewport"
+      uk-height-viewport
+      uk-flex 
+      uk-flex-middle
+      uk-flex-center"
     >
       <div
         class="uk-flex 
