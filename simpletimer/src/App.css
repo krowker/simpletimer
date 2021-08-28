@@ -1,1 +1,10 @@
+.timer-controls > div > input::-webkit-outer-spin-button,
+.timer-controls > div > input::-webkit-inner-spin-button {
+     /* display: none; */
+    -webkit-appearance: none;
+    margin: 0; 
+}
 
+.timer-controls > div > input[type=number] {
+    -moz-appearance:textfield;
+}

@@ -13,83 +13,93 @@ function App() {
 
   return (
     <div
-      className="App"
-      class="uk-background-secondary 
+      className="App 
+      uk-background-secondary 
       uk-light 
-      uk-padding 
-      uk-panel
-      uk-height-viewport
-      uk-flex 
-      uk-flex-middle
+      uk-padding       
+      uk-height-viewport      
+      uk-flex
+      uk-flex-column
       uk-flex-center"
     >
       <div
-        class="uk-flex 
-    uk-flex-center
-    uk-flex-middle
-    uk-grid-small
-    uk-text-center
-    uk-flex-column"
-        uk-grid
+        className="timer-controls
+        uk-grid-small
+        uk-text-center 
+        uk-child-width-1-3
+        uk-flex
+        uk-flex-center
+        "
+        uk-grid="true"
       >
-        <div>
-          <form>
-            <input
-              class="uk-input 
-          uk-form-width-small 
-          uk-text-center"
-              type="number"
-              min="0"
-              max="23"
-              placeholder={hour}
-              value={hour}
-              name="hour"
-              onInput={inputHandler}
-              disabled={timerState ? true : false}
-            />
-            <input
-              class="uk-input 
-          uk-form-width-small 
-          uk-text-center 
-          uk-margin-left"
-              type="number"
-              min="0"
-              max="60"
-              placeholder={min}
-              value={min}
-              name="min"
-              onInput={inputHandler}
-              disabled={timerState ? true : false}
-            />
-            <input
-              class="uk-input 
-          uk-form-width-small 
-          uk-text-center 
-          uk-margin-left"
-              type="number"
-              min="0"
-              max="60"
-              placeholder={sec}
-              value={sec}
-              name="sec"
-              onInput={inputHandler}
-              disabled={timerState ? true : false}
-            />
-          </form>
+
+        <div
+        className="uk-width-1-6@m
+        uk-width-1-3
+        ">
+          <input
+            className="uk-input   
+            uk-text-center"
+            type="number"
+            min="0"
+            max="23"
+            placeholder={hour}
+            value={hour}
+            name="hour"
+            onInput={inputHandler}
+            disabled={timerState ? true : false}
+          />
         </div>
-        <div class="uk-margin">
-          <div
-          >
-            <button
-              class="uk-button uk-button-default"
-              onClick={timerState ? stop : start}
-            >
-              {timerState ? "stop" : "start"}
-            </button>
-          </div>
+
+
+        <div
+        className="uk-width-1-6@m
+        uk-width-1-3"
+        >
+          <input
+            className="uk-input
+            uk-text-center 
+            "            
+            type="number"
+            min="0"
+            max="60"
+            placeholder={min}
+            value={min}
+            name="min"
+            onInput={inputHandler}
+            disabled={timerState ? true : false}
+          />
+        </div>
+        <div className="
+        uk-width-1-6@m
+        uk-width-1-3
+        ">
+          <input
+            className="uk-input 
+            uk-text-center
+            "
+            type="number"
+            min="0"
+            max="60"
+            placeholder={sec}
+            value={sec}
+            name="sec"
+            onInput={inputHandler}
+            disabled={timerState ? true : false}
+          />
         </div>
       </div>
-    </div>
+      <div className="uk-margin
+      uk-flex
+      uk-flex-center">
+          <button
+            className="uk-button uk-button-default"
+            onClick={timerState ? stop : start}
+          >
+            {timerState ? "stop" : "start"}
+          </button>
+      </div>
+      </div>
   );
 }
 
