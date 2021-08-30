@@ -97,12 +97,12 @@ function App() {
         >
           <button className="
           uk-button
-          uk-button-secondary
+          uk-button-default
           uk-button-small"
           >-</button>
           <button className="
           uk-button
-          uk-button-secondary
+          uk-button-default
           uk-button-small"
           >+</button>
         </div>
@@ -110,22 +110,22 @@ function App() {
         uk-child-width-1-2">
           <button className="
           uk-button
-          uk-button-secondary
+          uk-button-default
           uk-button-small">-</button>
           <button className="
           uk-button
-          uk-button-secondary
+          uk-button-default
           uk-button-small">+</button>
         </div>
         <div className="
         uk-child-width-1-2">
           <button className="
           uk-button
-          uk-button-secondary
+          uk-button-default
           uk-button-small">-</button>
           <button className="
           uk-button
-          uk-button-secondary
+          uk-button-default
           uk-button-small">+</button>
         </div>
       </div>
