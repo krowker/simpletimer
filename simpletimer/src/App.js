@@ -28,15 +28,13 @@ function App() {
         uk-text-center 
         uk-child-width-1-3
         uk-flex
-        uk-flex-center
-        "
+        uk-flex-center"
         uk-grid="true"
       >
-
         <div
-        className="uk-width-1-6@m
-        uk-width-1-3
-        ">
+          className="uk-width-1-6@m
+          uk-width-1-3"
+        >
           <input
             className="uk-input   
             uk-text-center"
@@ -50,16 +48,14 @@ function App() {
             disabled={timerState ? true : false}
           />
         </div>
-
-
         <div
-        className="uk-width-1-6@m
-        uk-width-1-3"
+          className="uk-width-1-6@m
+          uk-width-1-3"
         >
           <input
             className="uk-input
             uk-text-center 
-            "            
+            "
             type="number"
             min="0"
             max="60"
@@ -70,14 +66,13 @@ function App() {
             disabled={timerState ? true : false}
           />
         </div>
-        <div className="
-        uk-width-1-6@m
-        uk-width-1-3
-        ">
+        <div
+          className="uk-width-1-6@m
+          uk-width-1-3"
+        >
           <input
             className="uk-input 
-            uk-text-center
-            "
+            uk-text-center"
             type="number"
             min="0"
             max="60"
@@ -89,17 +84,62 @@ function App() {
           />
         </div>
       </div>
+      <div className="config-buttons        
+        uk-grid-small
+        uk-text-center 
+        uk-child-width-1-6@m
+        uk-flex
+        uk-flex-center"
+        uk-grid="true"
+        >
+        <div className="
+        uk-child-width-1-2"
+        >
+          <button className="
+          uk-button
+          uk-button-secondary
+          uk-button-small"
+          >-</button>
+          <button className="
+          uk-button
+          uk-button-secondary
+          uk-button-small"
+          >+</button>
+        </div>
+        <div className="
+        uk-child-width-1-2">
+          <button className="
+          uk-button
+          uk-button-secondary
+          uk-button-small">-</button>
+          <button className="
+          uk-button
+          uk-button-secondary
+          uk-button-small">+</button>
+        </div>
+        <div className="
+        uk-child-width-1-2">
+          <button className="
+          uk-button
+          uk-button-secondary
+          uk-button-small">-</button>
+          <button className="
+          uk-button
+          uk-button-secondary
+          uk-button-small">+</button>
+        </div>
+      </div>
       <div className="uk-margin
       uk-flex
       uk-flex-center">
-          <button
-            className="uk-button uk-button-default"
-            onClick={timerState ? stop : start}
-          >
-            {timerState ? "stop" : "start"}
-          </button>
+        <button
+          className="uk-button uk-button-default"
+          onClick={timerState ? stop : start}
+        >
+          {timerState ? "stop" : "start"}
+        </button>
       </div>
-      </div>
+    </div>
   );
 }
 
