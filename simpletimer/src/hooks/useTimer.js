@@ -8,6 +8,7 @@ export const useTimer = (time= 1500) => {
 
   const setTimer=({hour,min,sec})=>{
     const time = +hour*3600+ +min*60+ +sec
+    if(time<0) return
     setCounter(time)
   }
 

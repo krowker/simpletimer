@@ -5,10 +5,18 @@ import "uikit/dist/css/uikit.min.css";
 
 function App() {
   const [hour, min, sec, timerState, start, stop, setTimer] = useTimer();
-
+  
   const inputHandler = (event) => {
     const { name, value } = event.target;
     setTimer({ hour, min, sec, [name]: +value });
+  };
+
+  const incHandler = (field, value) => {
+    setTimer({ hour, min, sec, [field]: +value+1 });
+  };
+
+  const decHandler = (field, value) => {
+    setTimer({ hour, min, sec, [field]: +value-1 });
   };
 
   return (
@@ -99,11 +107,13 @@ function App() {
           uk-button
           uk-button-default
           uk-button-small"
+          onClick={()=>decHandler("hour", hour)}
           >-</button>
           <button className="
           uk-button
           uk-button-default
           uk-button-small"
+          onClick={()=>incHandler("hour", hour)}
           >+</button>
         </div>
         <div className="
@@ -111,22 +121,30 @@ function App() {
           <button className="
           uk-button
           uk-button-default
-          uk-button-small">-</button>
+          uk-button-small"
+          onClick={()=>decHandler("min", min)}
+          >-</button>
           <button className="
           uk-button
           uk-button-default
-          uk-button-small">+</button>
+          uk-button-small"
+          onClick={()=>incHandler("min", min)}
+          >+</button>
         </div>
         <div className="
         uk-child-width-1-2">
           <button className="
           uk-button
           uk-button-default
-          uk-button-small">-</button>
+          uk-button-small"
+          onClick={()=>decHandler("sec", sec)}
+          >-</button>
           <button className="
           uk-button
           uk-button-default
-          uk-button-small">+</button>
+          uk-button-small"
+          onClick={()=>incHandler("sec", sec)}
+          >+</button>
         </div>
       </div>
       <div className="uk-margin
